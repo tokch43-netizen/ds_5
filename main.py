@@ -9,43 +9,43 @@ class Student:
         self.alive = True
 
     def to_study(self):
-        print("Time to study")
+        print("навчання")
         self.progress += 0.12
         self.gladness -= 3
 
     def to_sleep(self):
-        print("I'll sleep")
+        print("Спатки, спатки")
         self.gladness += 3
 
     def to_chill(self):
-        print("rest time")
+        print("Чіл тайм")
         self.gladness += 5
         self.progress -= 0.1
         self.money -= 100
 
     def to_work(self):
-        print("Time to work")
+        print("Час працювати")
         self.money += 500
         self.gladness -= 5
 
     def is_alive(self):
         if self.progress < -0.5:
-            print("Past out....")
+            print("Втомлений")
             self.alive = False
         elif self.gladness <= 0:
-            print("Too tired")
+            print("Дуже втомлений")
             self.alive = False
         elif self.progress > 4:
-            print("Passed externally..")
+            print("Кінець навчання")
             self.alive = False
 
     def end_of_day(self):
-        print(f"Gladness = {self.gladness}")
-        print(f"Progress = {round(self.progress, 2)}")
-        print(f"Money = {self.money}")
+        print(f"Щастя = {self.gladness}")
+        print(f"Прогрес = {round(self.progress, 2)}")
+        print(f"Мані тайм = {self.money}")
 
     def live(self, day):
-        day = "day " + str(day) + " of " + self.name + " life"
+        day = "День " + str(day) + " з життя " + self.name
         print(day)
 
         if self.money < 100:
